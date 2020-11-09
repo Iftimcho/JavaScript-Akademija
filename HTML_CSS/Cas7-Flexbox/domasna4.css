@@ -1,0 +1,107 @@
+body{
+    width: 95%;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: white;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    justify-content: flex-start;
+}
+.navbar{
+    justify-content: flex-end;
+    
+}
+.navbar > ul {
+    list-style: none;
+    padding-top: 15px;
+}
+.navbar > ul > li{
+    display: inline;
+}
+.navbar > ul > li > a{
+    text-decoration: none;
+    color: black;
+}
+
+.mainPicture{
+    width: 100%;
+    height: 800px;
+}
+img{
+    width: 100%;
+}
+.projectsFlex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 180px;
+}
+.projectsFlex2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.palmDiv{
+    height: 100px;
+    width: 150px;
+}
+.about{
+    margin-top: 200px;  
+}
+.aboutFlex{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+}
+
+.card{
+    display: inline-block;
+    width: 300px;
+    border: 1px solid white;
+}
+
+.buttonCard{
+    width: 100%;  
+    height: 30px;  
+}
+
+.button{
+    width: 100%;
+    height: 40px;
+    background: black;
+    color: white;
+    margin-left: 5px;
+}
+
+.button:hover{
+    cursor: pointer;
+}
+
+form{
+    width: 1200px;
+}
+form > input {
+    width: 1200px;
+    margin: 5px;
+    height: 30px;
+    color: grey;
+}
+
+footer{
+    margin-top: 20px;
+    width:1250px;
+    height: 20px;
+    background: black;
+    color: white;
+    text-align: center;
+}
+
+.projects{
+    align-content: space-between;
+}

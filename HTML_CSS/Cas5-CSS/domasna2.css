@@ -1,0 +1,52 @@
+h2{
+    color: green;
+}
+table{
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+#buttonDiv{
+    margin-left: 30px;
+    align-content: center;
+    margin-bottom: 20px;
+}
+.tOne tr:nth-child(2n){
+    background: red;
+}
+.tOne tr:nth-child(2n):hover{
+    background: chartreuse;
+}
+
+.tOne tr:nth-child(odd):hover{
+    background: orange;
+}
+
+.tTwo tr:nth-child(2n){
+    background: mediumvioletred;
+}
+.disappearDiv {
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background: grey;
+    border: 1px dashed black;
+}
+
+.disappearDiv:hover {
+    display: none;
+}
+
+#loremDiv{
+    margin-left: 400px;
+    width: 700px;
+    text-decoration: overline;
+    color: grey;
+    text-shadow: 1px 1px lightslategray;
+    text-transform: uppercase;
+    text-align: center;
+    
+}
+
+#changeColor:hover{
+    color: magenta;
+}

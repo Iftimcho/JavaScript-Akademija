@@ -1,0 +1,35 @@
+.flex-container {
+    display: flex;
+    width: 1200px;
+    height: 300px;
+    background: blue;
+    justify-content: center;
+    align-content: center;
+}
+/* parent > child  => ova znaci site deca na toj roditel da go imaat ovoj css*/
+.flex-container > div{
+    background: lightgray;
+    font-size: 30px;
+    color: green;
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+    text-align: center;
+    margin: auto;
+}
+.flexGrow{
+    flex-grow: 2;
+}
+.flexBasis{
+    flex-basis: 300px;
+}
+/*
+moze i vaka so dodavanje na klasata childs na site div elementi vo parent div-ot
+.childs{
+    background: lightgray;
+    font-size: 20px;
+    color: lime;
+    width: 50px;
+    height: 50px;
+}
+*/

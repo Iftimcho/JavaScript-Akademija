@@ -1,0 +1,20 @@
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    background: lightblue;
+}
+
+.flex-container > div {
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    
+}
+
+.flex-container > div:hover {
+    box-shadow: 5px 10px #888888;
+}
+

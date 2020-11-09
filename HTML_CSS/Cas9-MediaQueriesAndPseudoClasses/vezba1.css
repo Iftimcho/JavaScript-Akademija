@@ -1,0 +1,59 @@
+.navigation{
+    display: flex;
+    background: lightgray;
+}
+.imgLogo{
+    display: inline-block;
+    justify-content: flex-start;
+    padding: 5px;
+}
+.nav{
+    display: inline-block;
+    justify-content: flex-end;
+}
+li{
+    list-style: none;
+    margin: 10px;
+    float: right;
+}
+img{
+    width: 100%;
+}
+
+.flexboxContainer{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.flexItem{
+    border: 4px solid lightblue;
+    text-align: center;
+    width: 150px;
+    height: 200px;
+}
+
+.contactForm >input {
+    width: 1300px;
+    margin: 10px;
+}
+.contactForm > textarea{
+    margin: 10px;
+    width: 1300px;
+    height: 100px;
+}
+
+@media(max-width:600px)
+{
+    li{
+        float: none;
+    }
+
+    img{
+        display: none;
+    }
+
+    .flexboxContainer{
+        display: inline;
+        justify-items: center;
+    }
+}

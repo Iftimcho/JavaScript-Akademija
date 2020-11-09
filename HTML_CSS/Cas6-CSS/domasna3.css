@@ -1,0 +1,39 @@
+.navbar{
+    list-style: none;
+    text-decoration: none;
+}
+.content {
+    display: inline-block;
+}
+li{
+    display: inline-block;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.field1{
+    width: 49%;
+    display: inline-block;
+}
+.field2{
+    width: 49%;
+    display: inline-block;
+}
+img{
+    float: left;
+    margin-right: 10px;
+}
+
+p{
+    text-align: justify;
+    display: inline-block;
+    width: 49%;
+    
+}
+fieldset{
+    display: inline-block;
+}
+hr{
+    margin-bottom: 15px;
+}

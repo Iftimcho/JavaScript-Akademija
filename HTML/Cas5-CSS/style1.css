@@ -1,0 +1,41 @@
+#firstDiv {
+    border: 2px solid red;
+    width: 600px;
+    text-align: center;
+}
+
+span {
+    color: red;
+    font-weight: bold;
+}
+
+tr:nth-child(even){
+    font-size: 20px;
+}
+tr:nth-child(odd){
+    font-size: 12px;
+}
+
+#secondDiv{
+    margin-top: 15px;
+    border: 3px dotted  red;
+    background-color: lightskyblue;
+    width: 300px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+button{
+    background-color: mediumblue;
+    width: 100px;
+    height: 40px;
+    color: lime;
+}
+
+button:hover {
+    background-color: lime;
+    border-top: 4px solid mediumblue;
+    border-bottom: 4px solid mediumblue;
+    cursor: pointer;
+    color: mediumblue;
+}

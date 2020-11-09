@@ -1,0 +1,30 @@
+.calculator{
+    display: grid;
+    grid-gap: 10px;
+    width: 800px;
+    background: lightseagreen;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+}
+
+.calculator > div {
+    background: white;
+    text-align: center;
+    font-size:15px;
+    padding: 10px;
+}
+
+.calculator > div:hover {
+    font-size: 18px;
+    background: blue;
+    font-weight: bold;
+}
+
+.fieldLarge{
+    grid-area: 1/1/1/5;
+}
+
+.fieldEquals{
+    grid-area: 5/2/5/5
+}

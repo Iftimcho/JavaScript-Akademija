@@ -1,0 +1,44 @@
+div{
+    font-size: 40px;
+    text-align: center;
+    height: 150px;
+}
+/*inline-block width ako e 50% na site elementi vo redot ke preminat vo nov red, 
+  treba vkupnata sirocina da bide 99% za da bidat vo isti red */
+#divOne{
+    display: inline-block;
+    background: red;
+    width: 49%;
+}
+
+#divTwo{
+    display: inline-block;
+    background: yellow;
+    width: 49%;
+}
+
+#divThree{
+    display: block;
+    background: blue;
+}
+
+#divFour{
+    display: inline-block;
+    width: 49%;
+    background: red;
+}
+
+#divFive{
+    display: inline-block;
+    width: 49%;
+    background: yellow;
+}
+
+#divSix{
+    display: block;
+    background: blue;
+}
+
+img{
+    float: right;
+}

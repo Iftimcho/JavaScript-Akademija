@@ -1,0 +1,22 @@
+/* body{
+    background-image: linear-gradient(red,green);
+}
+p{
+    background: red;
+}
+
+@media(max-width: 900px){
+    p {background: green;}
+} */
+
+li{
+    float: right;
+    list-style: none;
+    margin: 10px;
+}
+
+@media(max-width:550px){
+    li{
+        float:none;
+    }
+}

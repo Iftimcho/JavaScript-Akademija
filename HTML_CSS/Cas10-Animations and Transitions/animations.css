@@ -1,0 +1,38 @@
+.box {
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    animation-name: firstAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: 3;
+    position: absolute;
+}
+
+/* @keyframes firstAnimation{
+    from {background: blue; top: 0px; left: 0px;}
+    to {background: red; top: 0px; left: 1200px; border-radius: 50%;}
+} */
+
+@keyframes firstAnimation{
+    0% { background: blue; border-radius: 10%;top: 0px; left: 0px;}
+    20% {background: lightblue; border-radius: 20%; top: 0px; left: 300px;}
+    40% {background: green; border-radius: 30%; top: 0px; left: 600px;}
+    60% {background: orangered; border-radius: 40%; top: 200px; left: 400px;}
+    80% {background: red; border-radius: 50%; top: 200px; left: 200px;}
+    100% {background: blue; border-radius: 10%; top: 200px; left: 0px;}
+}
+
+.transition{
+    background: yellow;
+    height: 200px;
+    width: 200px;
+    transition: width 2s, height 2s, background 3s, transform 3s;
+}
+.transition:hover{
+    background: chocolate;
+    cursor: pointer;
+    height: 400px;
+    width: 400px;
+    transform: rotate(190deg);
+}
+

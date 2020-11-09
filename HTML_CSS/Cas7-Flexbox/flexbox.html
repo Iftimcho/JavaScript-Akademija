@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="flexbox.css">
+    <title>Flexbox</title>
+</head>
+<body>
+    <h2>Vo ovoj slucaj e isplatlivo da se stavi order propertito na child elementite vo inline css odnosno style tag</h2>
+    <h3>Mn retko se slucuva ova da se napisi na ovoj nacin</h3>
+    <div class="flex-container">
+        <div style="order: 5;" class="flexBasis">
+            1
+        </div>
+        <div style="order: 3">
+            2
+        </div>
+        <div style="order: 2;" class="flexGrow">
+            3
+        </div>
+        <div style="order: 1;">
+            4
+        </div>
+        <div style="order:4">
+            5
+        </div>
+    </div>
+
+    <hr style="height: 5px; background: black;">
+</body>
+</html>

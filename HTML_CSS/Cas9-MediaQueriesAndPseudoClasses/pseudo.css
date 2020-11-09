@@ -1,0 +1,25 @@
+        input {
+            display: block;
+            height: 40px;
+            margin: 20px;
+            border: 0px;
+            border-bottom: 1px solid lightgray;
+            width: 100%;
+        }
+        input[type="checkbox"]:checked {
+            height: 50px;
+            width: 50px;
+        }
+
+        p:empty {
+            background: red;
+        }
+
+        input:first-of-type {
+            background: green;
+        }
+
+        input:first-child {
+            border: 3px solid red;
+        }
+

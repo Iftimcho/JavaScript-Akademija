@@ -1,0 +1,125 @@
+body{
+    background: lightgray;
+}
+.cloud > img{
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.cloud1{
+    animation-name: firstCloud;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    position: absolute;
+}
+
+.cloud2{
+    animation-name: secondCloud;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    position: absolute;
+}
+.cloud3{
+    animation-name: thirdCloud;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    position: absolute;
+}
+.cloud4{
+    animation-name: fourthCloud;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    position: absolute;
+}
+
+@keyframes firstCloud{
+    0% {top: 0px; left: 200px;}
+    25% {top: 0px; left: 500px;}
+    50% {top: 0px; left: 800px;}
+    75% {top: 0px; left: 1100px;}
+    100%{top: 0px; left: 1400px;}
+}
+
+@keyframes secondCloud{
+    0% {top: 0px; left: 1200px;}
+    25% {top: 0px; left: 1000px;}
+    50% {top: 0px; left: 800px;}
+    75% {top: 0px; left: 600px;}
+    100%{top: 0px; left: 300px;}
+}
+@keyframes thirdCloud{
+    0% {top: 0px; left: 400px;}
+    25% {top: 0px; left: 600px;}
+    50% {top: 0px; left: 800px;}
+    75% {top: 0px; left: 1000px;}
+    100%{top: 0px; left: 1200px;}
+}
+@keyframes fourthCloud{
+    0% {top: 0px; left: 1400px;}
+    25% {top: 0px; left: 1000px;}
+    50% {top: 0px; left: 800px;}
+    75% {top: 0px; left: 400px;}
+    100%{top: 0px; left: 100px;}
+}
+
+.raindrops{
+    margin-top: 50px;
+
+}
+.raindrops > img{
+    width: 100px;
+    height: 50px;
+}
+
+.rain1{
+    animation-name: rainOne;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+.rain2{
+    animation-name: rainTwo;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+@keyframes rainOne{
+    0% {left:0px;}
+    50% {left: 20px;}
+    100%{left: 40px}
+}
+
+@keyframes rainTwo{
+    0% {left:200px; top: 200px;}
+    50% {left:400px; top: 400px;}
+    100%{left:600px; top: 600px;}
+}
+.rain{
+    margin-top: 150px;
+    animation-name: rain;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+.rain > img {
+    height: 500px;
+    width: 800px;
+}
+
+@keyframes rain{
+    0% {left:0px}
+    10%{left:150px}
+    20% {left: 300px}
+    30% {left: 500px}
+    40%{left: 800px}
+    50%{left: 1100px}
+    60%{left: 1300px}
+    70%{left: 1000px}
+    80%{left: 700px}
+    90%{left: 400px;}
+    100%{left:200px}
+}
