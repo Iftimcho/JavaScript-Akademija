@@ -1,3 +1,7 @@
 .setAttribute {
     background-color: aquamarine;
 }
+
+#delTd {
+    display: none;
+}

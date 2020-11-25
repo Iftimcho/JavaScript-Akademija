@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kladilnica</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="match">Enter your match and tip: </label>
+        <input type="text" id="match"> <br> <br>
+        <label for="coef">Enter coef</label>
+        <input type="text" id="coef"> <br> <br>
+        <label for="uplata">Enter amount: </label>
+        <input type="number" id="uplata"> <br> <br>
+        <button id="add" onclick="addToTicket()">Add to my ticket</button>
+    </form>
+    <br> <br>
+    <table border="1" id="table">
+        <tr>
+            <td>Match</td>
+            <td>Coef</td>
+        </tr>
+    </table>
+    <button id="calculate" onclick="calculate()">Calculate</button>
+    <br> <br>
+    <p id="showResult"></p>
+
+    <script src="kladilnica.js"></script>
+</body>
+
+</html>
