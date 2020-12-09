@@ -42,25 +42,48 @@ const getPosition = () => {
 const setTimer = vreme => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve("Done");
+            resolve("Done!");
         }, vreme)
     });
 }
 
-function getUserPosition() {
-    let positionData;
-    getPosition().then((position) => {
-        positionData = position;
-        return setTimer(2000);
-    })
-    // ovoj then se odnesuva na promise-ot vo setTimer funkcijata
-    .then(str=> {
-        console.log(str, positionData);
-    })
-    // ovoj catch e za getPosition promise-ot
-    .catch((err) => {
-        console.log(err);
-    })
-}
+// function getUserPosition() {
+//     let positionData;
+//     getPosition().then((position) => {
+//         positionData = position;
+//         return setTimer(2000);
+//     })
+//     // ovoj then se odnesuva na promise-ot vo setTimer funkcijata
+//     .then(str=> {
+//         console.log(str, positionData);
+//     })
+//     // ovoj catch e za getPosition promise-ot
+//     .catch((err) => {
+//         console.log(err);
+//     })
+// }
 
 getUserPosition();
+
+async function getUserPosition() {
+    try{
+        const position = await getPosition();
+        const timerData = await setTimer();
+        console.log(timerData, position);
+    }
+    catch(error) {
+        console.log(error);
+    }
+    try {
+        let p = await promise;
+    }
+    catch(error) {
+        console.log(error);
+    }
+    finally{
+            // Ovoj del ke se izvrsi bez razlika dali e uspesno ili ne 
+            // Se izvrsuva vo sekoj slucaj
+            // ne mora da se pisuva
+    }
+    
+}
