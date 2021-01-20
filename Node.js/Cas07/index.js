@@ -9,7 +9,7 @@ const http = require('http');
 const { StringDecoder } = require('string_decoder');
 const util = require('util');
 const url = require('url');
-const path = require('path');
+// const path = require('path');
 
 const PORT = process.env.PORT || 3000; // ke ja iskoristi porta 3000 dokolku nemame konfiguraciski fajl(env)
 
@@ -28,13 +28,14 @@ const server = http.createServer((req, res) => {
     //     res.end();
     // }
 
-    let decoder = new StringDecoder('utf-8');
+    let decoder = new StringDecoder('utf-8'); // ce;ot tekst od buffer go pretvora vo string
     let buffer = '';
 
     req.on('data', (chunk) => {
         buffer += decoder.write(chunk);
     });
 
+    let path = url.parse(req.url, true);
     req.on('end', () => {
         buffer += decoder.end();
         res.writeHead(200, "OK", { "Content-type" : "text/plain" });
