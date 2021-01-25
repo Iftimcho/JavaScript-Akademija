@@ -1,0 +1,30 @@
+<%- include('../template/head')-%>
+
+<body>
+    <div>
+        <%- include('../template/navbar')-%>
+        <main>
+            <h1>Table</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Website/Framework</th>
+                        <th>Url</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <%table.forEach((entry) => {%>
+                            <tr>
+                                <td><%=entry.name%></td>
+                                <td><%=entry.url%></td>
+                            </tr>
+                        <%})%>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        <%- include('../template/footer')-%>
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<%- include('../template/head') -%>
+
+<body>
+    <div>
+        <%- include('../template/navbar') -%>
+        <main>
+            <h1>Links</h1>
+            <ul>
+                <% links.forEach((link) => { %>
+                  <a href="<%=link.url%>"><%=link.name%></a>  
+                <%});%> 
+            </ul>
+        </main>
+        <%- include('../template/footer')-%>
+    </div>
+</body>
+</html>
