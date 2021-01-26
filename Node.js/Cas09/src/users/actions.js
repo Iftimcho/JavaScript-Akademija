@@ -1,7 +1,11 @@
 const usersDb = require('../db/users.json');
+const fs = require('fs');
+const hat = require('hat');
+const pathToUsers = 'C:\\Users\\Timce\\Desktop\\Akademija\\Node.js\\Cas09\\src\\db\\users.json';
 
 async function list(req, res, next) {
-    res.send({ body: usersDb });
+    const users = fs.readFileSync(pathToUsers, 'utf-8');
+    res.send({ body: JSON.parse(users) });
     await next;
 }
 
@@ -26,7 +30,7 @@ async function create(req, res, next) {
         username
     } = req.body;
     const requestPayload = {
-        id: String(usersDb.length + 1), // isto so usersDb.length++
+        id: hat(), // isto so usersDb.length++
         // firstName: 'Timce',
         // lastName: 'Pop-Icovski',
         // username: 'timcepopicovski'
@@ -36,6 +40,9 @@ async function create(req, res, next) {
     }
 
     usersDb.push(requestPayload);
+    fs.writeFileSync(pathToUsers, JSON.stringify(usersDb), (err) => {
+        console.log('User added');
+    });
     res.send({ body: usersDb });
     await next;
 }
@@ -57,8 +64,15 @@ async function update(req, res, next) {
                 firstName,
                 lastName,
                 username
-            } // se updejtuva celiot objekt a ne samo eden atribut na objektot. 
+            } // se updejtuva celiot objekt a ne samo eden atribut na objektot.
+            // let niza = JSON.parse(usersDb); 
             usersDb[userIndex] = toUpdateData;
+            fs.writeFile(pathToUsers, JSON.stringify(usersDb), (err) => {
+                if (err) {
+                    throw err;
+                }
+                console.log('File updated');
+            });
             res.send({ body: usersDb }); // vo body moze da go dodelime i req.body
         }
     } else {
