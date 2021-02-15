@@ -1,0 +1,35 @@
+/* ol li {​​​​
+    position: relative;
+    margin: 0px 0px 30px 0px;
+}​​​​
+ol li span {​​​​
+    display: inline;
+    font-weight: bold;
+    font-size: 35px;
+    transition: 0.3 ease-in-out;
+}​​​​
+    ol li span:before{​​​​
+    display: inline-block;
+    content: "";
+    width: 250px;
+    height: 4px;
+    background-color: #000;
+    position: absolute;
+    top:0;
+    bottom:0;
+    margin: auto;
+    transform:scale(0,1);
+    transform-origin: left;
+    transition: 0.3 ease-in-out;
+    }​​​​
+    .marked-done span:before{​​​​
+    transform: scale(1,1)
+    }​​​​
+    .marked-done span {​​​​
+    transform: scale(1,1);
+    color:#a8a8a8;
+    }​​​​
+    input[type="chekcbox"] {​​​​
+    width:20px;
+    height: 20px;
+    }​​​​ */
