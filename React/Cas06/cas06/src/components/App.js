@@ -46,6 +46,14 @@ export function App() {
       ]
     )
   }
+
+  function deleteItem(todo) {
+    setTodos(
+      [
+        ...todos.filter(item => (item.id !== todo.id))
+      ]
+    )
+  }
   return(
     <div id="app">
       <h2>Cas 06 - React JS </h2>
@@ -74,6 +82,7 @@ export function App() {
       <button onClick={addTodo}>Add Todo</button>
       <Todos todoList={todos}
         markTodoAsDone={markTodoAsDone}
+        deleteItem={deleteItem}
       />
     </div>
   )

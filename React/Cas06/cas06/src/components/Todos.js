@@ -10,8 +10,13 @@ export function Todos(props) {
                         return(
                             <li key={i} className={todo.done ? "marked-done" : ""}>
                                 <span>{todo.todoText}</span>
-                                <input type="checkbox" value={todo.done} 
-                                checked={todo.done} onChange={() => {props.markTodoAsDone(todo)}} />
+                                {/* <input type="checkbox" value={todo.done} 
+                                checked={todo.done} onChange={() => {props.markTodoAsDone(todo)}} /> */
+
+                                }
+                                <button onClick={() => {props.deleteItem(todo)}}>
+                                    Delete
+                                </button>
                             </li>
                         )
                     })
@@ -23,5 +28,6 @@ export function Todos(props) {
 
 Todos.propTypes = {
     todoList: PropTypes.array.isRequired,
-    markTodoAsDone: PropTypes.func.isRequired
+    markTodoAsDone: PropTypes.func,
+    deleteItem: PropTypes.func
 }
