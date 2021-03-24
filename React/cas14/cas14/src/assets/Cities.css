@@ -1,0 +1,112 @@
+.cities{
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url('https://cdn.wallpapersafari.com/60/20/50yc6t.jpg');
+    background-position: bottom;
+    background-size: cover;
+    transition: 0,4 ease;
+    position:absolute;
+    top:0;
+    margin-top: 45px;
+    width: 100%;
+    min-height: 100vh;
+    }
+    .loader {
+    border: 16px solid #F3F3F3;
+    border-radius: 50%;
+    border-top: 16px solid #3498DB;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin-left: 46%;
+    margin-top: 17%;
+    }
+    @keyframes spin { /* 15 */
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+    }
+    .cities.warm{
+    background-image: url('https://s6.favim.com/orig/140412/carrot-flowers-frozen-snow-Favim.com-1661118.gif');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    }
+    .cities.cold{
+    background-image: url('https://media.giphy.com/media/QYSZWvBhlfQTL8Fapy/giphy.gif');
+    background-size: cover;
+    background-position: bottom;
+    }
+    .search-box{
+    width: 100%;
+    margin: 0 0 75px;
+    top:70px;
+    left: 43%;
+    }
+    .search-box .search-bar{
+    display: block;
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    padding: 15px;
+    appearance: none;
+    border:none;
+    outline: none;
+    margin-top: 5%;
+    box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+    color:#313131;
+    font-size: 20px;
+    }
+    .search-box .search-bar:focus{
+    background-color: whitesmoke;
+    }
+    .search-button{
+    position: absolute;
+    left: 76%;
+    margin-top: 5%;
+    padding: 15px;
+    border:none;
+    color: #313131;
+    font-size: 20px;
+    }
+    .location-container{
+    position:absolute;
+    top:150px;
+    left:43%;
+    }
+    .location-box .location{
+    color:#fff;
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    text-shadow: 2px 2px rgba(137, 137, 173, 0.5);
+    }
+    .location-box .date{
+    color:#fff;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+    text-shadow: 2px 2px rgba(137, 137, 173, 0.5);
+    }
+    .weather-box{
+    text-align: center;
+    }
+    .weather-box .temp{
+    position:relative;
+    display: inline-block;
+    margin:30px auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 15px 25px;
+    color:#fff;
+    font-size: 102px;
+    font-weight: 900;
+    text-shadow: 3px 6px rgba(50,50,70,0.5);
+    text-align: center;
+    box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+    }
+    .weather-box .weather{
+    color:#fff;
+    font-size: 48px;
+    font-weight: 700;
+    text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+    }
