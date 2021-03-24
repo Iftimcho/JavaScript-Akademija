@@ -1,25 +1,26 @@
 const mongoose = require('mongoose');
 
 const doctorsSchema = mongoose.Schema({
+    // id nema potreba da se pisuva, mongo ke si kreira avtomatski pri create na nov resource
     _id: {
         type: mongoose.Schema.Types.ObjectId,
         required: true
     },
     ime: {
         type: String,
-        required: true
+        required: ['Ime is required']
     },
     prezime: {
         type: String,
-        required: true
+        required: ['Prezime is required']
     },
     dob: {
         type: Date,
-        required: true
+        required: ['Date of birth is required']
     },
     specijalizacija: {
         type: String,
-        required: true
+        required: ['Specijalizacija is required']
     }
 });
 
