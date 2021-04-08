@@ -1,0 +1,23 @@
+{
+  "name": "proekt_web_services",
+  "version": "1.0.0",
+  "description": "Proektot vo koj ke izrabotuvame poveke veb servisi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon services/users & nodemon services/users"
+  },
+  "author": "Iftimcho Pop-Icovski",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.2",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.1"
+  }
+}
