@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon services/users & nodemon services/users"
+    "start-auth": "nodemon services/auth",
+    "start-users": "nodemon services/users",
+    "start": "concurrently --kill-others \"npm run start-auth\" \"npm run start-users\""
   },
   "author": "Iftimcho Pop-Icovski",
   "license": "ISC",

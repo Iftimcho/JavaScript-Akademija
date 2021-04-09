@@ -2,21 +2,6 @@ const User = require('../models/User');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 module.exports = {
-    fetch: async (req, res) => {
-        try {
-            const users = await User.find();
-            res.status(200).send({
-            error: false,
-            users: users
-        });
-        } catch (error) {
-            res.status(500).send({
-                error: true,
-                message: error.message
-            });
-        }
-        
-    },
     register: async (req, res) => {
         try {
             if(!req.body.password || req.body.password != req.body.confirmPassword) {
@@ -90,5 +75,23 @@ module.exports = {
                 message: error.message
             })
         } 
-    }
+    },
+    refresh_token: (req, res) => {
+        // Otkako ke se logira korisnikot imame pristap do req.user objektot. Toa se podatoci za logiraniot korisnik.
+        console.log(req.user);
+        const payload = {
+          id: req.user.id,
+          email: req.user.email
+        };
+    
+        const token = jwt.sign(payload, 'secret_key', {
+          expiresIn: '30m'
+        });
+    
+        res.status(200).send({
+          error: false,
+          message: 'JWT successfully refreshed',
+          token
+        })
+      }
 };
