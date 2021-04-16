@@ -7,13 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-auth": "nodemon services/auth",
     "start-users": "nodemon services/users",
-    "start": "concurrently --kill-others \"npm run start-auth\" \"npm run start-users\""
+    "start-storage": "nodemon services/storage",
+    "start": "concurrently --kill-others \"npm run start-auth\" \"npm run start-users\" \"npm run start-storage\""
   },
   "author": "Iftimcho Pop-Icovski",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
     "express-jwt": "^6.0.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.2",
