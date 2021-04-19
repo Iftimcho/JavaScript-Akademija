@@ -1,6 +1,6 @@
 {
     "weather": {
-        "api_key" : "3f3f334ebc387ca14d55b907958d16b2",
+        "api_key" : "...",
         "api_version": "2.5"
     },
     "db": {
