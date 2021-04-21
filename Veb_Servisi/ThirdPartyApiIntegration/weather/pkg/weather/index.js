@@ -31,9 +31,23 @@ const byCity = async (city) => {
     }
     return cityCache[city].data;
 }
-const byCityState = async (city, state) => {
+
+const cityStateCache = {};
+const byCityState = async (city, state) => {    
+    if(cityStateCache[city] && cityStateCache[city].state == state.toUpperCase() && cityStateCache[city].timestamp > new Date().getTime()) {
+        return cityStateCache[city];
+    }
+
     const result = await fetch(`${API_PREFIX}/weather?q=${city},${state}&units=metric&appid=${API_KEY}`);
-    return await result.json();
+    let data = await result.json();
+
+    cityStateCache[city] = {
+        city: data,
+        state: data.sys.country,
+        timestamp: new Date().getTime() + 60 * 1000
+    };
+
+    return cityStateCache[city].city;
 }
 
 module.exports = {
