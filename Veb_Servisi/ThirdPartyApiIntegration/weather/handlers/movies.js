@@ -3,7 +3,6 @@ const movies = require('../pkg/movies/index');
 const getMovie = async (req, res) => {
     try {
         const movie = await movies.byTitle(req.params.title);
-        console.log(movie);
         res.send({
             error: false,
             movie

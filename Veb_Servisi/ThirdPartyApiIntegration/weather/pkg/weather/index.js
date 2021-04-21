@@ -33,9 +33,10 @@ const byCity = async (city) => {
 }
 
 const cityStateCache = {};
-const byCityState = async (city, state) => {    
-    if(cityStateCache[city] && cityStateCache[city].state == state.toUpperCase() && cityStateCache[city].timestamp > new Date().getTime()) {
-        return cityStateCache[city];
+const byCityState = async (city, state) => {  
+    const currentTimestamp = new Date().getTime();  
+    if(cityStateCache[city] && cityStateCache[city].state == state && cityStateCache[city].timestamp > currentTimestamp) {
+        return cityStateCache[city].city;
     }
 
     const result = await fetch(`${API_PREFIX}/weather?q=${city},${state}&units=metric&appid=${API_KEY}`);
@@ -43,7 +44,7 @@ const byCityState = async (city, state) => {
 
     cityStateCache[city] = {
         city: data,
-        state: data.sys.country,
+        state: state,
         timestamp: new Date().getTime() + 60 * 1000
     };
 

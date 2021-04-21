@@ -6,7 +6,7 @@ const MOVIES_API_PREFIX = 'http://omdbapi.com/?apikey=';
 
 const movieCache = {};
 const byTitle = async (title) => {
-    let currentTimestamp = new Date.getTime();
+    let currentTimestamp = new Date().getTime();
     if(movieCache[title] && movieCache[title].timestamp > currentTimestamp) {
         return movieCache[title].data;
     }
@@ -30,7 +30,6 @@ const bySeason = async (title, season) => {
     }
     const result = await fetch(`${MOVIES_API_PREFIX}${MOVIES_API_KEY}&t=${title}&Season=${season}`);
     const data = await result.json();
-    console.log(data.Season);
     seasonCache[title] = {
         episodes: data,
         timestamp: new Date().getTime() + 60 * 1000,
